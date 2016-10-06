@@ -1,0 +1,1 @@
+python compile_burst.py build_ext --inplace

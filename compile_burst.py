@@ -12,9 +12,11 @@ except ImportError:
     from distutils.extension import Extension
 
 from Cython.Build import cythonize
+import numpy
 
 setup(
-    name = 'testing',
-    ext_modules = cythonize("testing.pyx")
+    name = 'burst',
+    ext_modules = cythonize("burst.pyx"),
+    include_dirs=[numpy.get_include()]
 )
 
